@@ -1,0 +1,49 @@
+<idea-plugin>
+    <id>rebase-guru</id>
+    <name>rebase-guru</name>
+    <version>0.1.0</version>
+    <vendor url="https://github.com/serg-bloim/idea-rebase-guru"/>
+
+    <description><![CDATA[
+      Additional rebase functionality:
+        - fixup commit
+        - squash commit
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Release 0.1.0: Initial release.<br>
+      <i>Implemented enhancements:</i>
+      <ul>
+            <li>Fixup commit action from VCS log context menu</li>
+            <li>Squash commit action from VCS log context menu</li>
+        </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="162"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <group id="FixupGroup">
+            <separator/>
+            <action id="FixupPlugin.intellij.gitfixup.FixupAction" class="intellij.gitfixup.FixupAction" text="Fixup"
+                    description="create a fixup commit"/>
+            <action id="FixupPlugin.intellij.gitfixup.SquashAction" class="intellij.gitfixup.SquashAction" text="Squash"
+                    description="create a squash commit"/>
+            <add-to-group group-id="Vcs.Log.ContextMenu" anchor="last"/>
+        </group>
+    </actions>
+
+</idea-plugin>
