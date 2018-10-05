@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>rebase-guru</id>
     <name>rebase-guru</name>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <vendor url="https://github.com/serg-bloim/idea-rebase-guru"/>
 
     <description><![CDATA[
@@ -11,6 +11,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      Release 0.1.1: Updated until-build property
       Release 0.1.0: Initial release.<br>
       <i>Implemented enhancements:</i>
       <ul>

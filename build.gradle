@@ -23,7 +23,4 @@ intellij {
     version '2018.1.1'
     plugins 'git4idea' //Bundled plugin dependencies
     pluginName 'git-fixup'
-    publish {
-        pluginId 'rebase-guru'
-    }
 }
